@@ -1,28 +1,79 @@
 import React, { forwardRef, useRef } from 'react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { motion } from 'framer-motion';
 import classes from './Home.module.scss';
 import logo from '../../assets/logo.png';
 // import video from '../../assets/vide';
 
 const Home = () => {
+  const AnimateItemLeft = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.9 },
+    }),
+  };
+
+  const TeaxtAnimation = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+  const ItemAnimationLeft = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.1 },
+    }),
+  };
+  const ItemAnimationRight = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.1 },
+    }),
+  };
   const ref = useRef(null);
 
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
-    <>
-      <div className={classes['home']}>
+    <div>
+      <motion.div
+        viewport={{ once: true }}
+        initial="hidden"
+        whileInView="visible"
+        className={classes['home']}>
         <div className={classes['video-bg']}></div>
         <div className={classes['container']}>
           <div className={classes['home__wrapper']}>
-            <div className={classes['home__logo']}>
+            <motion.div variants={AnimateItemLeft} className={classes['home__logo']}>
               <img src={logo} alt="" />
-            </div>
+            </motion.div>
             <div className={classes['home__text']}>
-              <h2>Группа звездных огней для публичных мероприятий и концертов </h2>
+              <motion.h2 custom={2} variants={TeaxtAnimation}>
+                Группа звездных огней для публичных мероприятий и концертов{' '}
+              </motion.h2>
               <FontAwesomeIcon
                 onClick={handleClick}
                 className={classes['home__icon']}
@@ -31,28 +82,49 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div ref={ref} className={classes['contact']}>
+      </motion.div>
+      <motion.div
+        viewport={{ amount: 0.3, once: true }}
+        initial="hidden"
+        whileInView="visible"
+        ref={ref}
+        className={classes['contact']}>
         <div className={classes['contact__inner']}>
-          <a href="#!" className={classes['contact__item']}>
+          <motion.a
+            custom={1}
+            variants={ItemAnimationRight}
+            href="#!"
+            className={classes['contact__item']}>
             Telefon
-          </a>
-          <a href="#!" className={classes['contact__item']}>
+          </motion.a>
+          <motion.a
+            custom={1}
+            variants={ItemAnimationLeft}
+            href="#!"
+            className={classes['contact__item']}>
             Instagram
-          </a>
-          <a href="#!" className={classes['contact__item']}>
+          </motion.a>
+          <motion.a
+            custom={1}
+            variants={ItemAnimationRight}
+            href="#!"
+            className={classes['contact__item']}>
             Telegram
-          </a>
-          <a href="#!" className={classes['contact__item']}>
+          </motion.a>
+          <motion.a
+            custom={1}
+            variants={ItemAnimationLeft}
+            href="#!"
+            className={classes['contact__item']}>
             Manzil
-          </a>
+          </motion.a>
         </div>
 
         <div className={classes['contact__logo']}>
           <img src={logo} alt="" />
         </div>
-      </div>
-    </>
+      </motion.div>
+    </div>
   );
 };
 
