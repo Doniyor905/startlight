@@ -3,7 +3,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import classes from './Home.module.scss';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/vector.svg';
 import video from '../../assets/IMG_2272.MP4';
 // import video from '../../assets/vide';
 
@@ -67,7 +67,14 @@ const Home = () => {
         className={classes['home']}>
         {/* <video width="320" height="240" src={video} autoplay muted loop></video> */}
         <div className={classes['video-bg']}></div>
-        <video className={classes['home__video']} autoPlay muted loop>
+        <video
+          className={classes['home__video']}
+          video
+          autoPlay
+          loop
+          muted
+          playsinline
+          webkit-playinginline>
           <source src={video} type="video/mp4" />
         </video>
         <div className={classes['container']}>
