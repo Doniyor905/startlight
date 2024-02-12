@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import classes from './Home.module.scss';
 import logo from '../../assets/logo.png';
+import video from '../../assets/IMG_2272.MP4';
 // import video from '../../assets/vide';
 
 const Home = () => {
@@ -64,7 +65,11 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         className={classes['home']}>
+        {/* <video width="320" height="240" src={video} autoplay muted loop></video> */}
         <div className={classes['video-bg']}></div>
+        <video className={classes['home__video']} autoPlay muted loop>
+          <source src={video} type="video/mp4" />
+        </video>
         <div className={classes['container']}>
           <div className={classes['home__wrapper']}>
             <motion.div variants={AnimateItemLeft} className={classes['home__logo']}>
@@ -93,28 +98,28 @@ const Home = () => {
           <motion.a
             custom={1}
             variants={ItemAnimationRight}
-            href="#!"
+            href="tel:998988005858"
             className={classes['contact__item']}>
             Telefon
           </motion.a>
           <motion.a
             custom={1}
             variants={ItemAnimationLeft}
-            href="#!"
+            href="https://www.instagram.com/star_lights_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             className={classes['contact__item']}>
             Instagram
           </motion.a>
           <motion.a
             custom={1}
             variants={ItemAnimationRight}
-            href="#!"
+            href="https://t.me/STARLIGHTS_DIRECTOR"
             className={classes['contact__item']}>
             Telegram
           </motion.a>
           <motion.a
             custom={1}
             variants={ItemAnimationLeft}
-            href="#!"
+            href="https://maps.app.goo.gl/APkmrNzdcjivT2KNA"
             className={classes['contact__item']}>
             Manzil
           </motion.a>
