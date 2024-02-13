@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import classes from './Home.module.scss';
 import logo from '../../assets/vector.svg';
-import video from '../../assets/IMG_2272.MP4';
-// import video from '../../assets/vide';
+
 
 const Home = () => {
   const AnimateItemLeft = {
