@@ -67,16 +67,24 @@ const Home = () => {
         className={classes['home']}>
         {/* <video width="320" height="240" src={video} autoplay muted loop></video> */}
         <div className={classes['video-bg']}></div>
-        <video
-          className={classes['home__video']}
-          video
-          autoPlay
-          loop
-          muted
-          playsinline
-          webkit-playinginline>
-          <source src={video} type="video/mp4" />
-        </video>
+        <iframe
+          className={classes['home__iframe-desc']}
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/dRkpCHI4KCw?&loop=1&playlist=dRkpCHI4KCw&mute=1&autoplay=1&enablejsapi=1&controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe
+          className={classes['home__iframe-mob']}
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/ua70DD4IHbM?loop=1&playlist=ua70DD4IHbM&mute=1&autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
         <div className={classes['container']}>
           <div className={classes['home__wrapper']}>
             <motion.div variants={AnimateItemLeft} className={classes['home__logo']}>
