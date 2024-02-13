@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import classes from './Home.module.scss';
 import logo from '../../assets/vector.svg';
 
-
 const Home = () => {
   const AnimateItemLeft = {
     hidden: {
@@ -70,7 +69,7 @@ const Home = () => {
           className={classes['home__iframe-desc']}
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/dRkpCHI4KCw?&loop=1&playlist=dRkpCHI4KCw&mute=1&autoplay=1&enablejsapi=1&controls=0"
+          src="https://www.youtube.com/embed/sxIVUQVuvmQ?&loop=1&playlist=sxIVUQVuvmQ&mute=1&autoplay=1&enablejsapi=1&controls=0"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
