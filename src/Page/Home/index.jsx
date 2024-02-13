@@ -69,7 +69,7 @@ const Home = () => {
           className={classes['home__iframe-desc']}
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/sxIVUQVuvmQ?&loop=1&playlist=sxIVUQVuvmQ&mute=1&autoplay=1&enablejsapi=1&controls=0"
+          src="https://www.youtube.com/embed/sxIVUQVuvmQ?&loop=1&playlist=sxIVUQVuvmQ&mute=1&autoplay=1&enablejsapi=1&controls=0" //youtu.be/sxIVUQVuvmQ
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -78,7 +78,7 @@ const Home = () => {
           className={classes['home__iframe-mob']}
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/ua70DD4IHbM?loop=1&playlist=ua70DD4IHbM&mute=1&autoplay=1"
+          src="https://www.youtube.com/embed/6iPs3jFL3kk?loop=1&playlist=6iPs3jFL3kk&mute=1&autoplay=1" //youtube.com/shorts/6iPs3jFL3kk
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
